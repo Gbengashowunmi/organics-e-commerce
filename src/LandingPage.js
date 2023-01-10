@@ -9,10 +9,11 @@ import { GrFacebook, GrInstagram, GrMail, GrTwitter } from "react-icons/gr";
 
 import Carousel from "react-bootstrap/Carousel";
 import ItemCard from "./ItemCard";
+import ItemCard2 from "./ItemCard2";
+import ShortMessage from "./ShortMessage";
 
 export default function LandingPage() {
   const [index, setIndex] = useState(0);
-
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
@@ -42,61 +43,101 @@ export default function LandingPage() {
 
           <ul>
             <li>Home</li>
+            <li>Shop products</li>
             <li>Vendor Aaccount</li>
-            <li>Track Orders</li>
-            <li>User Account</li>
             <li>Track My Orders</li>
-            <li>Back to Demos</li>
           </ul>
         </div>
       </header>
 
-      {/* <div className="carousel_container">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://bonik-react.vercel.app/assets/images/products/apple-watch-0.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FAutomotive%2F1.Ford2019.png&w=1920&q=75"
-          alt="Second slide"
-        />
+      <div className="carousel_container">
+        <Carousel activeIndex={index} onSelect={handleSelect}>
+          <Carousel.Item>
+            <div className="carousel-content">
+            <div className="details">
+              <h1>First slide label</h1>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <Button variant="contained">
+                Read more
+              </Button>
+            </div>
+            <div className="image">
+              <img className="d-block w-100 carousel-image" src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FAutomotive%2F1.Ford2019.png&w=1920&q=75" alt="First slide" />
+            </div>
+            </div>
+          </Carousel.Item>
+          {/* <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FAutomotive%2F1.Ford2019.png&w=1920&q=75"
+              alt="Second slide"
+            />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FAutomotive%2F5.Ford2018.png&w=1920&q=75"
-          alt="Third slide"
-        />
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2FAutomotive%2F5.Ford2018.png&w=1920&q=75"
+              alt="Third slide"
+            />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-      </div> */}
-      <ItemCard />
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item> */}
+        </Carousel>
+      </div>
 
+      <div className="flash">
+        <div className="header">
+          <h3>Flash</h3>
+          <button>
+            <p>View all</p>
+          </button>
+        </div>
+        <div className="item-cards">
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </div>
+      </div>
+      <div className="flash">
+        <div className="header">
+          <h3>Most Bought</h3>
+          <button>
+            <p>View all</p>
+          </button>
+        </div>
+        <div className="item-cards">
+          <ItemCard2 />
+          <ItemCard2 />
+          <ItemCard2 />
+        </div>
+      </div>
+
+      <section>
+        <ShortMessage />
+        <ShortMessage />
+        <ShortMessage />
+        <ShortMessage />
+      </section>
       <footer>
-        <div className="logo"><h1>Organics</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at amet.</p></div>
+        <div className="logo">
+          <h1>Organics</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+            libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et
+            lectus vel ut sollicitudin elit at amet.
+          </p>
+        </div>
         <div className="about-us">
           <h3>About Us</h3>
           <ul>
@@ -125,11 +166,11 @@ export default function LandingPage() {
             uilib.help@gmail.com Phone: +1 1123 456 780
           </p>
           <div className="contact-icon">
-            <GrFacebook className="icon"/>
-            <GrTwitter className="icon"/>
-            <GrInstagram className="icon"/>
-            <BsWhatsapp className="icon"/>
-            <GrMail className="icon"/>
+            <GrFacebook className="icon" />
+            <GrTwitter className="icon" />
+            <GrInstagram className="icon" />
+            <BsWhatsapp className="icon" />
+            <GrMail className="icon" />
           </div>
         </div>
       </footer>
