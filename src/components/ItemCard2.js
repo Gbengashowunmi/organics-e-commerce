@@ -1,5 +1,4 @@
 import React from "react";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 export default function ItemCard2() {
   return (

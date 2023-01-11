@@ -1,6 +1,10 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./App.css";
-import LandingPage from "./LandingPage";
+import ScrollToTop from "./components/ScrollToTop";
+import LandingPage from "./pages/LandingPage";
+import ProductDetail from "./pages/ProductDetails/ProductDetail";
 
 function App() {
   // const [darkMode, setDarkMode] = useState(false);
@@ -9,7 +13,9 @@ function App() {
   //   setDarkMode(!darkMode);
   // };
   return (
+
     <div className="App">
+
       {/* <div className="dark_mode" onClick={toggleDarkMode}>
         {darkMode && (
           <style>
@@ -29,7 +35,16 @@ function App() {
             <IoSunny className="react_icon" />
         )} */}
       {/* </div> */}
-            <LandingPage/> 
+      <BrowserRouter>
+      <ScrollToTop/>
+
+      <Routes>
+        <Route path="/" element={<LandingPage/>}></Route>
+        <Route path="details" element={<ProductDetail/>}></Route>
+      </Routes>
+
+      </BrowserRouter>
+             
     </div>
   );
 }
