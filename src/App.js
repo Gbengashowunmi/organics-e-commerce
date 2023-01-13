@@ -5,6 +5,9 @@ import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
 import LandingPage from "./pages/LandingPage";
 import ProductDetail from "./pages/ProductDetails/ProductDetail";
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   // const [darkMode, setDarkMode] = useState(false);
