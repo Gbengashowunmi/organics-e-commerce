@@ -36,9 +36,10 @@ export default function HeadFoot({children}) {
             <input placeholder="Type and hit enter" />
           </div>
           <div className="cart_contact">
-            <div className="icon-container">
+           <Link to="/view-cart"> <div className="icon-container">
               <BsCart4 className="icon" />
             </div>
+            </Link>
             <div className="icon-container">
               <RiAccountPinCircleFill className="icon" />
             </div>

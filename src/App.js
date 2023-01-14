@@ -5,8 +5,8 @@ import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
 import LandingPage from "./pages/LandingPage";
 import ProductDetail from "./pages/ProductDetails/ProductDetail";
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
+import ViewCart from "./pages/ViewCart/ViewCart";
+
 
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>}></Route>
         <Route path="details" element={<ProductDetail/>}></Route>
+        <Route path="view-cart" element={<ViewCart/>}></Route>
       </Routes>
 
       </BrowserRouter>
